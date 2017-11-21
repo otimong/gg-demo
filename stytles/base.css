@@ -1,0 +1,28 @@
+@tailwind preflight;
+
+@tailwind utilities;
+
+a {
+    text-decoration: none
+}
+.latest-frontpage{
+    column-width: 13em;
+    column-gap: 1em;
+   -moz-column-width: 13em;
+   -webkit-column-width: 13em;
+   -moz-column-gap: 1em;
+   -webkit-column-gap: 1em;  
+}
+.latest-frontpage-listing {
+    display: inline-block;
+    width:  100%;
+    @apply .mb-4 .shadow-md; 
+}
+.latest-frontpage-listing:hover{
+    @apply .shadow-lg;
+}
+@media (min-width: 375px) {
+    .latest-frontpage-listing {
+        /* @apply .w-1/2 */
+    }
+}

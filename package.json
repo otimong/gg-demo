@@ -1,17 +1,25 @@
 {
-	"name": "next-with-typescript",
-	"version": "1.0.0",
-	"scripts": {
-		"dev": "concurrently \"tsc --watch\" \"next -p ${PORT:-3000}\""
-	},
-	"dependencies": {
-		"next": "latest",
-		"react": "^16.0.0",
-		"react-dom": "^16.0.0"
-	},
-	"devDependencies": {
-		"@types/react": "^16.0.9",
-		"concurrently": "^3.1.0",
-		"typescript": "^2.1.5"
-	}
+    "name": "next-with-typescript",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "concurrently \"tsc --watch\" \"node server.js\"",
+        "build-css": "./node_modules/.bin/tailwind build stytles/base.css -c ./tailwinds.js -o static/styles.css",
+        "watch-css": "npm run build-css && node-sass-chokidar components/ -o ./styles --watch --recursive"
+    },
+    "dependencies": {
+        "@types/next": "^2.4.5",
+        "next": "latest",
+        "next-routes": "^1.1.0",
+        "react": "^16.0.0",
+        "react-apollo": "^2.0.1",
+        "react-dom": "^16.0.0"
+    },
+    "devDependencies": {
+        "@types/react": "^16.0.9",
+        "@types/react-dom": "^16.0.3",
+        "concurrently": "^3.1.0",
+        "node-sass-chokidar": "^0.0.3",
+        "tailwindcss": "^0.1.6",
+        "typescript": "^2.1.5"
+    }
 }
