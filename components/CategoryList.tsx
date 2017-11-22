@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import * as React  from 'react'
 import Link from 'next/link'
 
 import { Icon } from 'guloggratis-ui'
 
 import { rootCategories } from '../static/data/index'
 
-export class CategoryList extends Component {
+export class CategoryList extends React.Component {
     render() {
         return (
             <div className="p-2">

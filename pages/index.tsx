@@ -1,5 +1,4 @@
-import React from "react"
-import Head from 'next/head'
+import * as React from "react"
 import { Ad } from 'guloggratis-ui'
 
 import { Layout } from '../components/Layout'

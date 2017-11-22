@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React  from 'react'
 import { latestListings } from '../../static/data/index'
 
 import * as Router from '../../routes/routes'
@@ -10,7 +10,7 @@ interface Props {
 
 const Link = Router.routes.Link
 
-export class LatestListings extends Component<Props, Object> {
+export class LatestListings extends React.Component<Props, Object> {
 
     static defaultProps: Props = {
         header: 'Nyeste annoncer'

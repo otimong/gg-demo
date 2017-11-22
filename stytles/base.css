@@ -21,8 +21,3 @@ a {
 .latest-frontpage-listing:hover{
     @apply .shadow-lg;
 }
-@media (min-width: 375px) {
-    .latest-frontpage-listing {
-        /* @apply .w-1/2 */
-    }
-}

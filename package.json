@@ -2,7 +2,8 @@
     "name": "next-with-typescript",
     "version": "1.0.0",
     "scripts": {
-        "dev": "concurrently \"tsc --watch\" \"node server.js\"",
+        "pre-build": "rm -rf build && mkdir build && cp -r static build/",
+        "dev": "npm run pre-build && tsc && concurrently \"tsc --watch\" \"cd build && node server.js\"",
         "build-css": "./node_modules/.bin/tailwind build stytles/base.css -c ./tailwinds.js -o static/styles.css",
         "watch-css": "npm run build-css && node-sass-chokidar components/ -o ./styles --watch --recursive"
     },

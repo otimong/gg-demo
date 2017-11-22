@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { ListingCard, ListingsLoading } from 'guloggratis-ui'
 import { graphql, QueryProps } from 'react-apollo';
 import { frontPageListingsQuery } from '../../queries/FrontPageListings'
