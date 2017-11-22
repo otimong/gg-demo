@@ -8,7 +8,7 @@ export const Header = () => (
         </div>
         <div className="sm:flex lg:flex justify-between items-center mx-auto max-w-lg ">
             <div className="xs:flex justify-center py-2 xs:w-100 sm:w-1/4 lg:w-1/4">
-                <img src="../../static/gg-logo.png" alt="" />
+                <a href="/" className="block"> <img className="w-3/4" src="../../static/gg-logo.png" alt="" /></a>
             </div>
             <div className="py-2 xs:px-2 xs:w-100 sm:w-3/4 lg:w-3/4">
                 <ul className="xs:hidden sm:flex lg:flex list-reset py-2 text-white font-medium">
@@ -27,7 +27,7 @@ export const Header = () => (
                 </ul>
                 <div className="flex">
                     <div className="flex-1">
-                        <Input width="100" size="large" placeholder="Sog blandet 1000000" propClasses="sm:w-100 xs:rounded-sm xs:rounded-l"/>
+                        <Input width="100" size="large" placeholder="Sog blandet 1000000" propClasses="sm:w-100 xs:rounded-sm xs:rounded-l" />
                     </div>
                     <div>
                         <Button size="large" propClasses={['border-0', 'rounded-sm', 'rounded-r']}>SOG</Button>

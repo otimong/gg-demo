@@ -1,6 +1,6 @@
-.next
-node_modules
+/.next
+/node_modules
 .DS_Store
-tmp
+/tmp
 /build
-*.js
+/components/**/*.js

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { latestFrontListings } from '../../static/data/index'
-import Link from 'next/link'
-// import { Link } from '../../routes/routes'
+import * as Routes from '../../routes/routes'
+
+const { Link } = Routes.routes
 
 interface Props {
     limit?: number
@@ -17,8 +18,8 @@ export class FrontPageListings extends Component<Props, Object> {
                 <ul className="list-reset latest-frontpage content-around">
                     {
                         latestFrontListings.slice(0, limit).map(listing => (
-                            <Link key={listing.title} href={`/listing/${listing.id}`} prefetch={true} >
-                                <a href={`/listing/${listing.id}`} className="text-grey-darkest text-lg">
+                            <Link key={listing.title} route="listing" params={{ id: `${listing.id}`, slug: `${listing.category.title}` }} prefetch={true} >
+                                <a className="text-grey-darkest text-lg">
                                     <li className="latest-frontpage-listing xs:w-1/2 sm:w-100 xs:p-2">
                                         <div>
                                             {listing.image && <img src={listing.image.url} alt="" className="w-100" />}

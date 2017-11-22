@@ -3577,7 +3577,7 @@ a {
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .xs\:list-reset {
     list-style: none;
     margin: 0;
