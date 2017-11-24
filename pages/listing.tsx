@@ -1,5 +1,7 @@
 import * as React from 'react'
-import { Ad, Icon, Button } from 'guloggratis-ui'
+import {Button} from '../components/Button'
+import {Ad} from '../components/Ad'
+import {Icon} from '../components/Icon'
 import Head from 'next/head'
 
 import { Layout } from '../components/Layout'
@@ -22,7 +24,7 @@ export default class ListingPage extends React.Component<Props, Object> {
                     <Head>
                         <title>{listing.title.toLocaleUpperCase()}</title>
                     </Head>
-                    <div className="flex justify-between">
+                    <div className="sm:flex justify-between">
                         <div>
                             <h1 className="my-2">
                                 {listing.title}
@@ -35,9 +37,9 @@ export default class ListingPage extends React.Component<Props, Object> {
                             dfsdfdsfdsf
                         </div>
                     </div>
-                    <div className="flex pb-2">
+                    <div className="sm:flex pb-2">
                         <div className="sm:w-2/3 mr-2">
-                            <div className="flex justify-between shadow-md border" style={{ height: '600px', overflow: 'hidden' }}>
+                            <div className="sm:flex justify-between shadow-md border" style={{ height: '600px', overflow: 'hidden' }}>
                                 <div className="mr-2 flex-1 bg-grey-light">
                                     {listing.posterImage && <img className="block m-auto" src={listing.posterImage.url} alt={listing.title} />}
                                     {!listing.posterImage && <div className="block m-auto"> </div>}
@@ -71,7 +73,7 @@ export default class ListingPage extends React.Component<Props, Object> {
                                 <FrontPageListings limit={4} columns={2} />
                             </div>
                         </div>
-                        <div className="w-1/3">
+                        <div className="sm:w-1/3">
                             <div className="shadow-md p-2 border leading-loose">
                                 <h3 className="pb-2">Privat bruger</h3>
                                 <div className="bg-yellow p-2 flex">
@@ -84,7 +86,6 @@ export default class ListingPage extends React.Component<Props, Object> {
                                         <p> 6093 Sjølund</p>
                                         <p> Medlem siden: 15/01-2005</p>
                                     </div>
-
                                 </div>
                                 <div>Spørgsmål og svar</div>
                                 <div>

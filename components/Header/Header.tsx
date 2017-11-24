@@ -1,12 +1,15 @@
 import * as React from 'react'
 import Link from 'next/link'
-import { Input, Button, Ad } from 'guloggratis-ui'
+import {Button} from '../Button'
+import {Ad} from '../Ad'
+import {Icon} from '../Icon'
+import {Input} from '../Forms'
 export const Header = () => (
     <header className="bg-black py-2">
         <div className="conatiner mx-auto max-w-lg">
             <Ad width="100%" height={180}/>
         </div>
-        <div className="sm:flex lg:flex justify-between items-center mx-auto max-w-lg ">
+        <div className="sm:flex lg:flex justify-between items-center mx-auto max-w-lg">
             <div className="xs:flex justify-center py-2 xs:w-100 sm:w-1/4 lg:w-1/4">
                 <a href="/" className="block"> <img className="w-3/4" src="../../static/gg-logo.png" alt="" /></a>
             </div>
@@ -27,10 +30,10 @@ export const Header = () => (
                 </ul>
                 <div className="flex">
                     <div className="flex-1">
-                        <Input width="100" size="large" placeholder="Sog blandet 1000000" propClasses="sm:w-100 xs:rounded-sm xs:rounded-l shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker " />
+                        <Input width="100" size="large" placeholder="Sog blandet 1000000" propClasses="sm:w-100 xs:rounded-sm xs:rounded-l shadow appearance-none border w-full py-4 px-3 text-grey-darker " />
                     </div>
                     <div>
-                        <Button size="large" type="secondary" propClasses={['border-0', 'rounded-sm', 'rounded-r','text-white', 'font-bold', 'py-2', 'px-4', 'rounde']}>SOG</Button>
+                        <Button size="large" type="primary" propClasses={['border-0', 'rounded-sm', 'rounded-r','text-white', 'font-bold', 'px-4','py-4','leading-tight']}>SOG</Button>
                     </div>
                 </div>
             </div>

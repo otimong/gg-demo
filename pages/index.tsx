@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Ad } from 'guloggratis-ui'
+import { Ad } from '../components/Ad'
 
 import { Layout } from '../components/Layout'
 import { Header } from "../components/Header/index"

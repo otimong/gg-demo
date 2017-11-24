@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Head from 'next/head'
-import { Ad } from 'guloggratis-ui'
+import { Ad } from './Ad'
 
 import { Header } from "../components/Header/index"
 import { Footer } from "../components/Footer/index"
@@ -16,8 +16,6 @@ export const Layout: React.SFC<Props> = (props) => (
             <title>{props.title}</title>
             <meta charSet='utf-8' />
             <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
-
-            <link rel="stylesheet" href="/static/normalize.css" />
             <link rel="stylesheet" href="/static/styles.css" />
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         </Head>

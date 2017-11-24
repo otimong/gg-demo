@@ -1,7 +1,7 @@
 import * as React  from 'react'
 import Link from 'next/link'
 
-import { Icon } from 'guloggratis-ui'
+import { Icon } from '../components/Icon'
 
 import { rootCategories } from '../static/data/index'
 
