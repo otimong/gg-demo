@@ -1021,6 +1021,16 @@ button,
   cursor: pointer;
 }
 
+header {
+  background-color: aliceblue;
+  background-color: #3490dc;
+}
+
+.category-list {
+  position: absolute;
+  background-color: #ffffff;
+}
+
 .container {
   width: 100%;
 }
@@ -4084,12 +4094,12 @@ button,
   cursor: not-allowed;
 }
 
-header {
-  background-color: aliceblue;
-  background-color: #3490dc;
-}
-
 @media (min-width: 375px) and (max-width: 767px) {
+  .xs\:category-list {
+    position: absolute;
+    background-color: #ffffff;
+  }
+
   .xs\:list-reset {
     list-style: none;
     margin: 0;
@@ -7121,6 +7131,11 @@ header {
 }
 
 @media (min-width: 576px) {
+  .sm\:category-list {
+    position: absolute;
+    background-color: #ffffff;
+  }
+
   .sm\:list-reset {
     list-style: none;
     margin: 0;
@@ -10152,6 +10167,11 @@ header {
 }
 
 @media (min-width: 768px) {
+  .md\:category-list {
+    position: absolute;
+    background-color: #ffffff;
+  }
+
   .md\:list-reset {
     list-style: none;
     margin: 0;
@@ -13183,6 +13203,11 @@ header {
 }
 
 @media (min-width: 930px) {
+  .lg\:category-list {
+    position: absolute;
+    background-color: #ffffff;
+  }
+
   .lg\:list-reset {
     list-style: none;
     margin: 0;
@@ -16214,6 +16239,11 @@ header {
 }
 
 @media (min-width: 1200px) {
+  .xl\:category-list {
+    position: absolute;
+    background-color: #ffffff;
+  }
+
   .xl\:list-reset {
     list-style: none;
     margin: 0;
@@ -19245,6 +19275,11 @@ header {
 }
 
 @media (min-device-width: 375px) {
+  .phone\:category-list {
+    position: absolute;
+    background-color: #ffffff;
+  }
+
   .phone\:list-reset {
     list-style: none;
     margin: 0;
@@ -22276,6 +22311,11 @@ header {
 }
 
 @media (min-device-width: 576px) {
+  .ipad\:category-list {
+    position: absolute;
+    background-color: #ffffff;
+  }
+
   .ipad\:list-reset {
     list-style: none;
     margin: 0;

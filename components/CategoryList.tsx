@@ -8,7 +8,7 @@ import { rootCategories } from '../static/data/index'
 export class CategoryList extends React.Component {
     render() {
         return (
-            <div className="p-2">
+            <div className="p-2 category-list">
                 <ul className="list-reset leading-normal">
                     {
                         rootCategories.map((category, index) => (

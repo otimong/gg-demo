@@ -12,11 +12,11 @@ let tailwindcss = require('tailwindcss');
  */
 
 mix.sass('styles/scss/base.scss', 'styles/css/styles.css')
-.options({
-  processCssUrls: false,
-  postCss: [ tailwindcss('./tailwinds.js') ],
-  purifyCss:false,
-});
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss('./tailwinds.js')],
+    purifyCss: false,
+  })
 
 // Full API
 // mix.js(src, output);

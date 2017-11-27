@@ -1,5 +1,6 @@
 @import '~normalize.css/normalize';
 @tailwind preflight;
-@tailwind utilities;
 @import "header/header";
+@import "category_list/rootcategories";
+@tailwind utilities;
 

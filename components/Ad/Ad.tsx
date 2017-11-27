@@ -1,4 +1,5 @@
-import  * as React from 'react'
+import * as React from 'react'
+import classNames from 'classnames'
 
 export interface Props {
     id?: number
@@ -6,6 +7,7 @@ export interface Props {
     height: number | string
     backgroundColor?: string
     styles?: React.CSSProperties
+    classes?: string
 }
 
 export class Ad extends React.Component<Props, Object> {
@@ -15,7 +17,8 @@ export class Ad extends React.Component<Props, Object> {
         backgroundColor: 'aqua'
     }
     render() {
-        const { width, styles, height, backgroundColor } = this.props
+        const { width, styles, height, backgroundColor, classes } = this.props
+
         const style: React.CSSProperties = {
             width,
             height,
@@ -23,6 +26,6 @@ export class Ad extends React.Component<Props, Object> {
             ...styles
         }
         const styleMix = Object.assign({}, style, styles)
-        return <div style={styleMix}></div>
+        return <div style={styleMix} className={classes}></div>
     }
 }
