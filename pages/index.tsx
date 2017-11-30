@@ -7,9 +7,11 @@ import { Footer } from "../components/Footer/index"
 import { BreadCrumb } from "../components/BreadCrumb"
 import { CategoryList } from "../components/CategoryList"
 import { LatestListings } from "../components/Listings/LatestListings"
-import { FrontPageListings } from "../components/Listings/FrontPageListings"
+import { FrontPage } from "../components/FrontPageListings/"
 
-export default () => (
+import widthData from '../lib/widthData'
+
+export default widthData((props) => (
     <div>
         <Layout title="Guloggratis 2.0">
             <div className="sm:flex lg:flex py-2">
@@ -23,8 +25,8 @@ export default () => (
                 </div>
             </div>
             <div>
-                <FrontPageListings limit={40} />
+                <FrontPage />
             </div>
         </Layout>
     </div>
-)
+))

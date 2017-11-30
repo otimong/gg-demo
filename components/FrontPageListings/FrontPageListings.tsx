@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ListingCard, ListingsLoading } from 'guloggratis-ui'
+import { ListingCard } from '../Listings/ListingCard'
 import { graphql, QueryProps } from 'react-apollo';
 import { frontPageListingsQuery } from '../../queries/FrontPageListings'
 import { FrontPageListingsQuery, FrontPageListingsQueryVariables } from '../../queries/query-types'
@@ -17,13 +17,13 @@ const withFrontPageListings = graphql<
         props: ({ data }) => ({ ...data })
     });
 
-const FrontPageListings = withFrontPageListings(({ loading, listing_front, error, variables }: ShapedProps) => {
+export const FrontPageListings = withFrontPageListings(({ loading, listing_front, error, variables }: ShapedProps) => {
     let limit = variables.limit
     let dummyListings = []
 
-    for (var i = 0; i < limit; i++) {
-        dummyListings.push(<ListingsLoading key={i} />)
-    }
+    // for (var i = 0; i < limit; i++) {
+    //     dummyListings.push(<ListingsLoading key={i} />)
+    // }
 
     if (loading) {
         return (
@@ -35,12 +35,14 @@ const FrontPageListings = withFrontPageListings(({ loading, listing_front, error
     }
     if (error) { return <h1>ERROR</h1>; }
     return (
-        <div className="flex flex-wrap">
-            {
-                listing_front && listing_front.results.map(listing =>
-                    <ListingCard cardData={listing} key={listing.id} />
-                )
-            }
+        <div>
+            <ul className="list-reset latest-frontpage content-around">
+                {
+                    listing_front && listing_front.results.map(listing =>
+                        <ListingCard listing={listing} key={listing.id} />
+                    )
+                }
+            </ul>
         </div>)
 });
 

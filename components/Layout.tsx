@@ -15,7 +15,7 @@ export const Layout: React.SFC<Props> = (props) => (
         <Head>
             <title>{props.title}</title>
             <meta charSet='utf-8' />
-            <meta name="viewport" content="width=device-width, initial-scale=0.6, minimal-ui" />
+            <meta name="viewport" content="width=device-width, initial-scale=0.7, minimal-ui" />
             <link rel="stylesheet" href="/static/styles.css" />
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         </Head>

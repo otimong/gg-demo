@@ -4,11 +4,19 @@
     "scripts": {
         "build-tails": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "pre-build": "rm -rf build && mkdir build && cp -r static build/",
-        "dev": "npm run pre-build && tsc && concurrently \"tsc --watch\" \"cd build && node server.js\""
+        "dev": "npm run pre-build && tsc && concurrently \"tsc --watch\" \"cd build && node server.js\"",
+        "code-gen-schema": "cd ./queries/ && apollo-codegen introspect-schema http://localhost:3002/graphql --output schema.json",
+        "code-gen-types": "cd ./queries/ && apollo-codegen generate **/*.ts --schema schema.json --target typescript --output query-types.ts",
+        "code-gen": "npm run code-gen-schema && npm run code-gen-types"
     },
     "dependencies": {
         "@types/next": "^2.4.5",
+        "apollo-cache-inmemory": "^1.1.1",
+        "apollo-client": "^2.0.3",
+        "apollo-link-http": "^1.2.0",
         "classnames": "^2.2.5",
+        "graphql-tag": "^2.5.0",
+        "isomorphic-fetch": "^2.2.1",
         "next": "latest",
         "next-routes": "^1.1.0",
         "react": "^16.0.0",
@@ -18,6 +26,7 @@
     "devDependencies": {
         "@types/react": "^16.0.9",
         "@types/react-dom": "^16.0.3",
+        "apollo-codegen": "^0.18.0",
         "concurrently": "^3.1.0",
         "laravel-mix": "^1.6.1",
         "node-sass-chokidar": "^0.0.3",

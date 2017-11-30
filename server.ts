@@ -5,7 +5,7 @@ const app = next({ dev: process.env.NODE_ENV !== 'production', dir: './' });
 
 const handler = routes.routes.getRequestHandler(app);
 
-const port = parseInt(process.env.PORT, 10) || 3002
+const port = parseInt(process.env.PORT, 10) || 3003
 
 app.prepare().then(() => {
     const server = createServer(handler)
