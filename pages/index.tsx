@@ -1,13 +1,10 @@
-import * as React from "react"
+import * as React from 'react'
 import { Ad } from '../components/Ad'
 
 import { Layout } from '../components/Layout'
-import { Header } from "../components/Header/index"
-import { Footer } from "../components/Footer/index"
-import { BreadCrumb } from "../components/BreadCrumb"
-import { CategoryList } from "../components/CategoryList"
-import { LatestListings } from "../components/Listings/LatestListings"
-import { FrontPage } from "../components/FrontPageListings/"
+import { CategoryList } from '../components/CategoryList'
+import { LatestListings } from '../components/Listings/LatestListings'
+import { FrontPage } from '../components/FrontPageListings/'
 
 import widthData from '../lib/widthData'
 
