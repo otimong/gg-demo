@@ -215,7 +215,7 @@ export class CacheUtil<CacheType extends Model> {
 			// console.log(this.name, "item.id", item.id, this.getAgeInSeconds(item.id))
 
 			if (typeof item.id === "undefined") {
-				delete this.cache.byId[item.id]
+				delete this.cache.byId["undefined"]
 			} else if (this.isItemStale(item.id)) {
 				// add to end of queue (low pri)
 				this.scheduleUpdate(item.id, "low")
