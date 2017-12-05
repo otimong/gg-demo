@@ -1,7 +1,10 @@
 ```
 The Ides here is to see how far we can take this Utility-first css pattern
 You can read more about tyailwinds here: https://tailwindcss.com/docs/what-is-tailwind
-I think its really cool.  
+I think its really cool.
+
+Look through the larger components/pages and see how much you can extract into smaller components.
+I left some of them bigger deliberately, but i'd like a second opinion
 ```
 
 ```
