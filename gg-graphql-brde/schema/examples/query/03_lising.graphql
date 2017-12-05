@@ -1,0 +1,44 @@
+{
+	listing(id: 38714427) {
+		id
+		title
+		price
+		phone
+		description
+		transaction_type
+		address
+		zipcode
+		country
+		category {
+			id
+			title_slug
+			slug
+			parent {
+				children {
+					id
+					title
+					children {
+						id
+						title
+					}
+				}
+			}
+		}
+		user {
+			id
+			avatar(size: SMALL) {
+				url
+			}
+			extra {
+				listings {
+					id
+					title
+				}
+			}
+		}
+		images {
+			url
+			width
+		}
+	}
+}
