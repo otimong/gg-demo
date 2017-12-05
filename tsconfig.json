@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "esnext",
         "outDir": "build",
-        "target": "es5",
+        "target": "es2017",
         "jsx": "react",
         "allowJs": false,
         "moduleResolution": "node",

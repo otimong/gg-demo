@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import { Icon } from '../Icon'
-import * as classNames from 'classnames';
+import classNames from 'classnames';
 
 
 export interface ButtonProps {
@@ -34,7 +34,7 @@ export interface ButtonProps {
     type?: 'primary' | 'secondary'
 }
 
-export class Button extends React.Component<ButtonProps, Object> {
+export class Button extends Component<ButtonProps, Object> {
 
     static defaultProps: ButtonProps = {
         size: 'medium',
@@ -65,10 +65,12 @@ export class Button extends React.Component<ButtonProps, Object> {
 
         const buttonContent = typeof children === 'string' ? children.toString() : 'Button Text';
 
-        let button = (<button {...others} className={buttonClasses} onClick={onClick}>
-            {icon && <Icon type={icon} classes={iconClasses} />}
-            {buttonContent}
-        </button>);
+        let button = (
+            <button {...others} className={buttonClasses} onClick={onClick}>
+                {icon && <Icon type={icon} classes={iconClasses} />}
+                {buttonContent}
+            </button>
+        );
 
         return href
             ?

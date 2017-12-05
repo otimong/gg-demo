@@ -1,0 +1,19 @@
+.btn {
+    @apply .bg-white .border-grey .border .text-grey-darker .py-2 .px-4 .rounded;
+}
+.btn-small {
+    @apply .py-1;
+}
+.btn-large {
+    @apply .py-3;
+}
+.btn-primary {
+    @apply .bg-blue .text-white .border-blue;
+}
+
+.btn-danger {
+    @apply .bg-red .border-red .text-white;
+}
+.btn-round {
+    @apply .rounded-full .h-16 .w-16 .flex .items-center .justify-center
+}

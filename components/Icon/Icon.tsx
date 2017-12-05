@@ -1,5 +1,5 @@
-import * as React from 'react'
-import * as classnames from 'classnames'
+import React, { Component } from 'react'
+import classnames from 'classnames'
 
 export interface IconProps {
     type: string
@@ -8,7 +8,7 @@ export interface IconProps {
     onClick?: () => void
 }
 
-export class Icon extends React.Component<IconProps, Object> {
+export class Icon extends Component<IconProps, Object> {
 
     public static defaultProps: Partial<IconProps> = {
         size: 'lg'

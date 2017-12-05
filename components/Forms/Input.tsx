@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React, { Component } from 'react'
 import { Button } from '../Button'
-import * as classNames from 'classnames'
+import classNames from 'classnames'
 
 export interface Props {
     autoFocus?: boolean
@@ -18,7 +18,7 @@ interface Inputstate {
     clicked?: boolean
 }
 
-export class Input extends React.Component<Props, Inputstate> {
+export class Input extends Component<Props, Inputstate> {
 
     constructor(props) {
         super(props)
