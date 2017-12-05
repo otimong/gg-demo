@@ -8,11 +8,11 @@ I left some of them bigger deliberately, but i'd like a second opinion
 ```
 
 ```
-npm install           # to install dependencies
-npm run build-tails   #to build your tailwind css
-npm run start-graphql #This will start the graphql server
-npm run dev           # to compile TypeScript files and to run next.js  (localhost:3003)
-PORT=3030 npm run dev # ^ same but on port 3030
+npm install                                # to install dependencies
+npm run build-tails                        # to build your tailwind css
+npm run start-graphql                      # This will start the graphql server
+NODE_ENV=development npm run dev           # to compile TypeScript files and to run next.js  (localhost:3003)
+NODE_ENV=development PORT=3030 npm run dev # ^ same but on port 3030
 
 
 ```  
