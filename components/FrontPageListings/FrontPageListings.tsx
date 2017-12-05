@@ -33,7 +33,7 @@ export const FrontPageListings = withFrontPageListings(({ loading, listing_front
                 }
             </div>);
     }
-    if (error) { return <h1>ERROR</h1>; }
+    if (error) { return <h1>{error.extraInfo}</h1>; }
     return (
         <div>
             <ul className="list-reset latest-frontpage content-around">

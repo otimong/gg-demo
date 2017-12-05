@@ -38,11 +38,36 @@ export type FrontPageListingsQuery = {
         slug: string,
         title_slug: string,
       },
-      images:  Array< {
+      image:  {
+        id: number,
         url: string,
+        size: ImageSizeType | null,
         width: number,
         height: number,
-      } > | null,
+      } | null,
+    } > | null,
+  } | null,
+};
+
+export type LatestListingsQueryVariables = {
+  limit?: number | null,
+  image_size?: ImageSizeType | null,
+};
+
+export type LatestListingsQuery = {
+  // list the latest listings
+  listing_latest:  {
+    // a list of results (Listings)
+    results:  Array< {
+      id: number,
+      title: string,
+      price: number,
+      image:  {
+        url: string,
+        size: ImageSizeType | null,
+        width: number,
+        height: number,
+      } | null,
     } > | null,
   } | null,
 };

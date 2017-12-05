@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Head from 'next/head'
 import { Ad } from './Ad'
-
 import { Header } from "../components/Header/index"
 import { Footer } from "../components/Footer/index"
 import { BreadCrumb } from "../components/BreadCrumb"
@@ -24,7 +23,7 @@ export const Layout: React.SFC<Props> = (props) => (
             <Ad width="160px" height="600px" classes="xs:hidden" styles={{ position: 'absolute', marginLeft: "-160px" }} />
             <Ad width="160px" height="600px" classes="xs:hidden" styles={{ position: 'absolute', marginLeft: "930px" }} />
             <BreadCrumb />
-            <div className="container px-2">
+            <div className="sm:container px-2">
                 {props.children}
             </div>
         </div>

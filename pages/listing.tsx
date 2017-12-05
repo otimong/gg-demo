@@ -1,10 +1,11 @@
 import * as React from 'react'
-import { ListingPage } from '../components/ListingPage/Listing'
-
 import widthData from '../lib/widthData'
+import { ImageSizeType } from '../queries/query-types'
 
-export default widthData((props) => (
+import { Listing } from '../components/ListingPage/Listing'
+
+export default widthData((props) =>
     <div>
-        <ListingPage />
+        <Listing id={props.url.query.id} image_size={ImageSizeType.BIG} />
     </div>
-))
+)

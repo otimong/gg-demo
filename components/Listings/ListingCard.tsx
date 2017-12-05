@@ -13,7 +13,7 @@ export class ListingCard extends React.Component<Props, {}> {
             <div>
                 <Link key={listing.title} route="listing" params={{ id: `${listing.id}`, slug: `${listing.category.slug}` }} prefetch={true} as={`/listing/${listing.id}${listing.category.slug}`} >
                     <a className="text-grey-darkest text-lg">
-                        <li className={`latest-frontpage-listing xs:w-1/2 sm:w-100 xs:p-2`}>
+                        <li className={`latest-frontpage-listing sm:w-100 xs:p-2`}>
                             <div className="flex justify-center">
                                 {listing.image && <img src={listing.image.url} alt="" className="w-100" />}
                                 {!listing.image && <img src="../../static/place-holder.png" alt="" className="w-100" />}

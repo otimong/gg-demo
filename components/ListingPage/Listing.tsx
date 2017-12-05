@@ -24,13 +24,12 @@ const withListing = graphql<
         props: ({ data }) => ({ ...data })
     })
 
-const Listing = withListing(({ loading, listing, error }: SharedProps) => {
-    console.log(listing)
+export const Listing = withListing(({ loading, listing, error }: SharedProps) => {
     if (loading) {
         return <h1>loading...</h1>
     }
     if (error) {
-        return <h1>error</h1>
+        // return <h1>{error.extraInfo}</h1>
     }
     return (
         <div>
@@ -59,8 +58,8 @@ const Listing = withListing(({ loading, listing, error }: SharedProps) => {
                                 {!listing.image && <div className="block m-auto"> </div>}
                             </div>
                             <div className="items-center">
-                                {listing.images.length > 0 &&
-                                    listing.images.map(image => (
+                                {listing.thumbnails.length > 0 &&
+                                    listing.thumbnails.map(image => (
                                         <div className="mb-2 bg-grey-light" key={image.url}>
                                             <img src={image.url} className="block m-auto" alt={listing.title} />
                                         </div>
@@ -126,25 +125,7 @@ const Listing = withListing(({ loading, listing, error }: SharedProps) => {
                 </div>
             </Layout>
         </div>
-
     )
 })
 
-interface Props {
-    id?: any
-}
 
-export class ListingPage extends React.Component<Props> {
-    static getInitialProps({ query: { id } }) {
-        return { id }
-    }
-    render() {
-        const { id } = this.props
-        console.log("am here so what")
-        return (
-            <div className="center pt6 mw-site">
-                <Listing id={parseInt(id)} image_size={ImageSizeType.BIG} />
-            </div>
-        )
-    }
-}
