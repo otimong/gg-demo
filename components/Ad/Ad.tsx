@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
 export interface Props {
@@ -10,12 +10,13 @@ export interface Props {
     classes?: string
 }
 
-export class Ad extends React.Component<Props, Object> {
+export class Ad extends Component<Props, Object> {
     static defaultProps: Props = {
         height: `${180}%`,
         width: 180,
         backgroundColor: 'aqua'
     }
+    static displayName = "Ad"
     render() {
         const { width, styles, height, backgroundColor, classes } = this.props
 

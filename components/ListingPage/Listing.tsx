@@ -16,25 +16,23 @@ type SharedProps = ListingPageQuery & QueryProps
 const withListing = graphql<ListingPageQuery,
     ListingPageQueryVariables,
     QueryProps>(ListingsQuery, {
-    options: ({ id, image_size }) => ({
-        variables: { id, image_size },
-    }),
-    props: ({ data }) => ({ ...data }),
-})
+        options: ({ id, image_size }) => ({
+            variables: { id, image_size },
+        }),
+        props: ({ data }) => ({ ...data }),
+    })
 
 export const Listing = withListing(({ loading, listing, error }: SharedProps) => {
-    if (loading) {
-        return <h1>loading...</h1>
-    }
+    if (loading) return <h1>loading...</h1>
+
     if (error) {
         // return <h1>{error.extraInfo}</h1>
     }
+    if (!listing) return null;
+
     return (
         <div>
-            <Layout title="Listing">
-                <Head>
-                    <title>{listing.title.toLocaleUpperCase()}</title>
-                </Head>
+            <Layout title={listing.title.toLocaleUpperCase()}>
                 <div className="sm:flex justify-between">
                     <div>
                         <h1 className="my-2">
@@ -57,11 +55,11 @@ export const Listing = withListing(({ loading, listing, error }: SharedProps) =>
                             </div>
                             <div className="items-center">
                                 {listing.thumbnails.length > 0 &&
-                                listing.thumbnails.map(image => (
-                                    <div className="mb-2 bg-grey-light" key={image.url}>
-                                        <img src={image.url} className="block m-auto" alt={listing.title} />
-                                    </div>
-                                ))
+                                    listing.thumbnails.map(image => (
+                                        <div className="mb-2 bg-grey-light" key={image.url}>
+                                            <img src={image.url} className="block m-auto" alt={listing.title} />
+                                        </div>
+                                    ))
                                 }
                             </div>
                         </div>
@@ -93,7 +91,7 @@ export const Listing = withListing(({ loading, listing, error }: SharedProps) =>
                                 <div className="w-1/3 bg-grey-light">
                                     {listing.user.avatar && <img src={listing.user.avatar.url} alt="" />}
                                     {!listing.user.avatar &&
-                                    <div className="text-center"><Icon type="user-circle-o" size="4x" classes="text-white" /></div>}
+                                        <div className="text-center"><Icon type="user-circle-o" size="4x" classes="text-white" /></div>}
                                 </div>
                                 <div className="w-3/4 truncate px-2 text-sm">
                                     <p className="font-bold"> {listing.user.username}</p>
@@ -126,5 +124,7 @@ export const Listing = withListing(({ loading, listing, error }: SharedProps) =>
         </div>
     )
 })
+
+Listing.displayName = "Listing"
 
 

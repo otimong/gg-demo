@@ -1,9 +1,8 @@
-import * as React  from 'react'
+import React from 'react'
 import Link from 'next/link'
 
-import { Icon } from '../components/Icon'
-
-import { rootCategories } from '../static/data/index'
+import { Icon } from '../../components'
+import { rootCategories } from '../../static/data'
 
 export class CategoryList extends React.Component {
     render() {
@@ -15,7 +14,7 @@ export class CategoryList extends React.Component {
                             <li key={category.id} className="hover:bg-yellow hover:text-white inline-block w-1/2 pr-2">
                                 <Link href={`/category${category.slug}`} >
                                     <a href={`/category${category.slug}`} className="flex items-center hover:text-white text-grey-darkest">
-                                        <Icon type="car" size="xs"classes="text-yellow text-sm pr-2 hover:text-white" />{category.title} <div className="text-grey ml-2">{`(${category.count})`}</div>
+                                        <Icon type="car" size="xs" classes="text-yellow text-sm pr-2 hover:text-white" />{category.title} <div className="text-grey ml-2">{`(${category.count})`}</div>
                                     </a>
                                 </Link>
                             </li>

@@ -1,9 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import Head from 'next/head'
-import { Ad } from './Ad'
-import { Header } from "../components/Header/index"
-import { Footer } from "../components/Footer/index"
-import { BreadCrumb } from "../components/BreadCrumb"
+import { Ad } from '../Ad'
+import { Header } from "../../components/Header/index"
+import { Footer } from "../../components/Footer/index"
+import { BreadCrumb } from "../../components/BreadCrumb"
 
 interface Props {
     title: string
@@ -30,3 +30,4 @@ export const Layout: React.SFC<Props> = (props) => (
         <Footer />
     </div>
 )
+Layout.displayName = "Layout"

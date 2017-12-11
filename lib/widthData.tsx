@@ -76,13 +76,7 @@ export default ComposedComponent => {
             this.apollo = initApollo(pp)
         }
 
-        componentDidCatch(error) {
-            console.log(error)
-
-        }
-
         render() {
-            console.log(this.props)
             return (
                 <ApolloProvider client={this.apollo}>
                     <ComposedComponent {...this.props} />

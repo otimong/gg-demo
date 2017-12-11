@@ -1,19 +1,23 @@
-import * as React from 'react'
-import * as Routes from '../../routes/routes'
+import React from 'react'
+// import * as Routes from '../../routes/routes'
 
-const { Link } = Routes.routes
+const Route = require('../../routes/routes')
+
+const { Link } = Route
 
 export interface Props {
     listing: any
 }
 
+
 export class ListingCard extends React.Component<Props, {}> {
     render() {
         const { listing } = this.props
+        if (!listing) return <DummyCard />
         return (
             <div>
                 <Link key={listing.title} route="listing" params={{ id: `${listing.id}`, slug: `${listing.category.slug}` }}
-                      prefetch={true} as={`/listing/${listing.id}${listing.category.slug}`}>
+                    prefetch={true} as={`/listing/${listing.id}${listing.category.slug}`}>
                     <a className="text-grey-darkest text-lg">
                         <li className={`latest-frontpage-listing sm:w-100 xs:p-2`}>
                             <div className="flex justify-center">
@@ -28,3 +32,12 @@ export class ListingCard extends React.Component<Props, {}> {
         )
     }
 }
+
+const DummyCard = () => (
+    <div className="latest-frontpage-listing text-grey-darkest text-lg min-w-1/3">
+        <div className=" sm:w-100 xs:p-2 h-48 bg-grey-light">
+        </div>
+        <div className="bg-white text-center p-2">Kr. 00</div>
+    </div>
+)
+

@@ -24,6 +24,7 @@
         "jest",
         "src/setupTests.ts",
         "**/*.test.tsx",
-        "components/FrontPageListings"
+        "components/FrontPageListings",
+        "gg-graphql-brde"
     ]
 }

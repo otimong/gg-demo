@@ -1,3 +1,8 @@
 {
-    "presets": ["env", "react"]
-  }
+  "presets": [
+    "next/babel",
+    "env",
+    "react",
+    "es2015"
+  ]
+}

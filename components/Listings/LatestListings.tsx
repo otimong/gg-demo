@@ -1,20 +1,21 @@
-import * as React from 'react'
+import React, { Component } from 'react'
 import { latestListings } from '../../static/data/index'
 
-import * as Router from '../../routes/routes'
+const Route = require('../../routes/routes')
+const { Link } = Route
 
 interface Props {
     limit?: number
     header?: string
 }
 
-const Link = Router.routes.Link
 
-export class LatestListings extends React.Component<Props, Object> {
+export class LatestListings extends Component<Props, Object> {
 
     static defaultProps: Props = {
         header: 'Nyeste annoncer',
     }
+    static displayName = "LatestListings"
 
     render() {
         const timeAgo = (date) => {
@@ -36,7 +37,7 @@ export class LatestListings extends React.Component<Props, Object> {
                     {
                         listings.slice(0, limit).map(listing => (
                             <Link key={listing.title} route="listing" params={{ id: `${listing.id}`, slug: `${listing.category.slug}` }}
-                                  prefetch={true} as={`/listing/${listing.id}${listing.category.slug}`}>
+                                prefetch={true} as={`/listing/${listing.id}${listing.category.slug}`}>
                                 <a href={`/listing/${listing.id}${listing.category.slug}`} className="text-grey-darkest">
                                     <li className="flex items-center justify-between py-2 border-b border-gray-darkest text-sm">
                                         <div className="w-1/6">

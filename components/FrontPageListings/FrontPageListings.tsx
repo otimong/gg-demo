@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { ListingCard } from '../Listings/ListingCard'
 import { graphql, QueryProps } from 'react-apollo'
 import { frontPageListingsQuery } from '../../queries/FrontPageListings'
@@ -9,27 +9,22 @@ type ShapedProps = FrontPageListingsQuery & QueryProps;
 const withFrontPageListings = graphql<FrontPageListingsQuery,
     FrontPageListingsQueryVariables,
     ShapedProps>(frontPageListingsQuery, {
-    options: ({ limit }) => ({
-        variables: { limit },
-    }),
-    props: ({ data }) => ({ ...data }),
-})
+        options: ({ limit }) => ({
+            variables: { limit },
+        }),
+        props: ({ data }) => ({ ...data }),
+    })
 
 export const FrontPageListings = withFrontPageListings(({ loading, listing_front, error, variables }: ShapedProps) => {
     let limit = variables.limit
     let dummyListings = []
 
-    // for (var i = 0; i < limit; i++) {
-    //     dummyListings.push(<ListingsLoading key={i} />)
-    // }
+    for (var i = 0; i < limit; i++) {
+        dummyListings.push(<ListingCard listing={null} key={i} />)
+    }
 
-    if (loading) {
-        return (
-            <div className="flex flex-wrap">
-                {
-                    dummyListings.map(listing => listing)
-                }
-            </div>)
+    if (error) {
+        return dummyListings.map(listing => listing)
     }
     if (error) { return <h1>{error.extraInfo}</h1> }
     return (
