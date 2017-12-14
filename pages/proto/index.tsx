@@ -1,17 +1,8 @@
 import React, { Component } from 'react'
-import { Layout, Button, Header, Ad } from '../../components'
+import { Layout, Button, Header, FrontPage } from '../../components'
 import { LayoutOne } from '../../components'
-import withData from '../../lib/widthData'
+import widthData from '../../lib/widthData'
 
+const App = () => <LayoutOne title="Proto Page" />
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <LayoutOne title="Proto Page" />
-            </div>
-        )
-    }
-}
-
-export default withData(App)
+export default widthData(App)

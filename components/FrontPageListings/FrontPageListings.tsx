@@ -3,6 +3,7 @@ import { ListingCard } from '../Listings/ListingCard'
 import { graphql, QueryProps } from 'react-apollo'
 import { frontPageListingsQuery } from '../../queries/FrontPageListings'
 import { FrontPageListingsQuery, FrontPageListingsQueryVariables } from '../../queries/query-types'
+import { latestFrontListings } from '../../static/data'
 
 type ShapedProps = FrontPageListingsQuery & QueryProps;
 
@@ -18,20 +19,18 @@ const withFrontPageListings = graphql<FrontPageListingsQuery,
 export const FrontPageListings = withFrontPageListings(({ loading, listing_front, error, variables }: ShapedProps) => {
     let limit = variables.limit
     let dummyListings = []
+    let data;
 
-    for (var i = 0; i < limit; i++) {
-        dummyListings.push(<ListingCard listing={null} key={i} />)
+    if (listing_front) data = listing_front
+    if (loading || error) {
+        data = latestFrontListings
     }
 
-    if (error) {
-        return dummyListings.map(listing => listing)
-    }
-    if (error) { return <h1>{error.extraInfo}</h1> }
     return (
         <div>
             <ul className="list-reset latest-frontpage content-around">
                 {
-                    listing_front && listing_front.results.map(listing =>
+                    data && data.results.map(listing =>
                         <ListingCard listing={listing} key={listing.id} />,
                     )
                 }
@@ -39,8 +38,7 @@ export const FrontPageListings = withFrontPageListings(({ loading, listing_front
         </div>)
 })
 
-export const FrontPage = () => {
-    return <div className="center pt6 mw-site">
+export const FrontPage = () =>
+    <div className="center pt6 mw-site">
         <FrontPageListings limit={12} />
     </div>
-}

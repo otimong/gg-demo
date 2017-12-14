@@ -1,0 +1,1 @@
+export { GLink } from './Link'

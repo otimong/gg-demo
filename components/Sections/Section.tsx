@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
+import { FrontPage } from '../Sections/FrontPage'
+import { ImageSizeType } from '../../queries/query-types'
 import {
     Ad,
     CheckBox,
     CategoryList,
     Header,
     LatestListings,
-    FrontPage,
-    Footer
+    Footer,
+    Listing
 } from '../../components'
 
+const Route = require('../../routes/routes')
 interface State {
     showTopBanner?: boolean
     showFollowBanners?: boolean
     showEarBanners?: boolean
     showAllBanners?: boolean
+    showFrontPage?: boolean
+    showListingPage?: boolean
 
 }
 interface Props { }
@@ -23,19 +28,37 @@ export class Section extends Component<Props, State> {
         showTopBanner: true,
         showEarBanners: true,
         showFollowBanners: true,
-        showAllBanners: true
+        showAllBanners: true,
+        showFrontPage: true,
+        showListingPage: false
+    }
+
+    changeRout = () => {
+        Route.Router.pushRoute('/blog/hello-world', { slug: 'someshit' })
     }
     render() {
-        const { showTopBanner, showEarBanners, showAllBanners } = this.state
+        const { showTopBanner, showEarBanners, showAllBanners, showFrontPage, showListingPage } = this.state
+        const { children } = this.props
         return (
             <div className="flex">
                 <div className="bg-white w-1/6 h-screen mr-2">
                     <div className="leading-loose p-3 bg-blue text-white">
                         The Play Ground
                     </div>
-                    <ul className="list-reset flex flex-col p-3">
-                        <li className="mb-3">Front Page</li>
-                        <li className="mb-3">Listing Page</li>
+                    <ul className="list-reset flex flex-col text-grey-dark">
+                        <li className="border-b-2 p-3 cursor-pointer"
+                            onClick={() => this.setState({
+                                showFrontPage: true,
+                                showListingPage: false
+                            })
+                            }>Front Page</li>
+                        <li className="border-b-2 p-3 cursor-pointer"
+                            onClick={() => this.setState({
+                                showFrontPage: false,
+                                showListingPage: true
+                            })
+                            }>Listing Page</li>
+                        <li className="border-b-2 p-3 cursor-pointer">Components</li>
                     </ul>
                 </div>
                 <div className="w-full mr-2">
@@ -68,16 +91,8 @@ export class Section extends Component<Props, State> {
                         <div className="max-w-3xl m-auto">
                             <Header showTopBanner={showTopBanner || showAllBanners} />
                             <div className="max-w-lg m-auto relative">
-                                <div className="flex p-2">
-                                    <div className="w-2/3">
-                                        <CategoryList />
-                                    </div>
-                                    <div className="w-1/3">
-                                        {showAllBanners && <Ad width="100%" height="260px" />}
-                                        <LatestListings limit={3} />
-                                    </div>
-                                </div>
-                                <FrontPage />
+                                {showFrontPage && <FrontPage />}
+                                {showListingPage && <Listing id={38820494} {...this.state} image_size={ImageSizeType.BIG} />}
                                 {(showEarBanners || showAllBanners) &&
                                     <div className="flex justify-between">
                                         <div className="absolute pin-t" style={{ marginLeft: "-160px" }}>

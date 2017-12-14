@@ -1,3 +1,3 @@
 export { LayoutOne } from './LayoutOne'
 export { Layout } from './Layout'
-export { Section } from './Section'
+export { Section } from '../Sections/Section'
