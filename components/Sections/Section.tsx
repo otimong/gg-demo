@@ -95,10 +95,10 @@ export class Section extends Component<Props, State> {
                                 {showListingPage && <Listing id={38820494} {...this.state} image_size={ImageSizeType.BIG} />}
                                 {(showEarBanners || showAllBanners) &&
                                     <div className="flex justify-between">
-                                        <div className="absolute pin-t" style={{ marginLeft: "-160px" }}>
+                                        <div className="absolute pin-t" style={{ marginLeft: "-175px" }}>
                                             <Ad width="160px" height="600px" />
                                         </div>
-                                        <div className="absolute pin-t" style={{ marginLeft: "930px" }}>
+                                        <div className="absolute pin-t" style={{ marginLeft: "945px" }}>
                                             <Ad width="160px" height="600px" />
                                         </div>
                                     </div>

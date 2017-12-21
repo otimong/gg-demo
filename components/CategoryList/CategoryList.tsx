@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'next/link'
 
 import { Icon } from '../../components'
 import { rootCategories } from '../../static/data'
 
-export class CategoryList extends React.Component {
+export class CategoryList extends Component {
     render() {
         return (
             <div className="p-2 category-list">

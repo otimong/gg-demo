@@ -9,6 +9,7 @@ import Head from 'next/head'
 
 import { ListingPageQuery as ListingsQuery } from '../../queries/ListingPage'
 import { ListingPageQuery, ListingPageQueryVariables, ImageSizeType } from '../../queries/query-types'
+import { listing as SingleListing } from '../../static/data'
 
 type ExternalProps = {
     showAllBanners?: boolean
@@ -26,12 +27,10 @@ const withListing = graphql<
     })
 
 const ListingsContainer: React.SFC<SharedProps> = ({ loading, listing, error, ...other }) => {
-    if (loading) return <h1>loading...</h1>
-
-    if (error || loading) {
+    let data: any = SingleListing
+    if (error || loading || !loading) {
+        listing = data
     }
-    if (!listing) return null;
-
     return (
         <div>
             <div className="sm:flex justify-between">
@@ -114,7 +113,7 @@ const ListingsContainer: React.SFC<SharedProps> = ({ loading, listing, error, ..
                         {other.showAllBanners && <Ad width="100%" height={200} />}
                     </div>
                     <div>
-                        <h3 className="leading-loose">Lignende annoncer</h3>
+                        <h3 className="leading-loose p-2 bg-grey-lighter">Lignende annoncer</h3>
                         <div className="tablet:w-100">
                             <FrontPageListings limit={8} />
                         </div>

@@ -20,8 +20,8 @@ export const Layout: React.SFC<Props> = (props) => (
         </Head>
         <Header />
         <div className="middle-section mx-auto max-w-lg shadow-lg">
-            <Ad width="160px" height="600px" classes="xs:hidden" styles={{ position: 'absolute', marginLeft: "-160px" }} />
-            <Ad width="160px" height="600px" classes="xs:hidden" styles={{ position: 'absolute', marginLeft: "930px" }} />
+            <Ad width="160px" height="600px" classes="xs:hidden" styles={{ position: 'absolute', marginLeft: "-175px" }} />
+            <Ad width="160px" height="600px" classes="xs:hidden" styles={{ position: 'absolute', marginLeft: "945px" }} />
             <BreadCrumb />
             <div className="sm:container px-2">
                 {props.children}

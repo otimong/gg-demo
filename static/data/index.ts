@@ -428,3 +428,213 @@ export const latestFrontListings = {
         }
     ]
 }
+
+export const listing = {
+    "title": "Volvo S60 2,4 T  Aut/ tiptronic 22",
+    "description": "FLOT FLOT Volvo S 60  2.4 T  Aut Tiptronic ,KM 268500  org Soltag org RTI m fjbt.  Sort del læder indtræk (som nyt ) , 16\" Volvo vinterhjul  Aut klima,, Info center, ESP, Fartpilot ( ratbetjent ), Læderrat, Ydre temp måpler, , , Fjernbtjente c låse m. startspærre, Tåge forlygter, Org måttesæt, 4 El ruder, El spejle, træ indlæg, Make up spejl m/lys H +V, AQS ( air quality system ), Volvo radio/CD ( hu 803\r\n) ratbetjent -m.fj bt.  org. forstærker  ( volvo hu 803 lydanlæg ) Farve : Sort  comming home light i spejl   \r\n\r\nBilen er tysk importeret i 2016 og har kørt i Baden Baden og ejet af Volvo mand, Bilen er super flot og ikke huller i sæder osv ,kører super dejlig og på motorvejen når den 12-13 km/L. org RTI navigation som har 2013 kort opdatering.\r\nUndervognen ligner nærmest en ny ...  Vi har anvendt den som konebil 6 km til og fra arbejde.plus lidt  privat. Jeg har sat nye bremser på i 2016 ,  Ingen Bytte  Hvem skal have denne fantastiske bil ? Ny serviceret med olie div filtre gearolie mv",
+    "price": 4990000,
+    "transaction_type": "SELL",
+    "category": {
+        "slug": "/biler/personbiler/volvo/s60/",
+        "title_slug": "Biler og tilbehør/Personbiler/Volvo/S60"
+    },
+    "image": {
+        "url": "https://images.guloggratis.dk/16/183892416_600_600_0_0_0_0_0.jpg",
+        "width": 600,
+        "height": 600
+    },
+    "images": [
+        {
+            "url": "https://images.guloggratis.dk/16/183892416_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/11/183892511_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/21/183892421_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/40/183892440_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/37/183892437_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/4/183892604_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/45/183892545_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/90/183892490_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/59/183892459_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/94/183892494_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/42/183892442_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/67/183892467_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/7/183892507_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/58/183892758_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/74/183892774_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/28/183892428_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/44/183892444_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        },
+        {
+            "url": "https://images.guloggratis.dk/49/183892449_600_600_0_0_0_0_0.jpg",
+            "width": 600,
+            "height": 600
+        }
+    ],
+    "thumbnails": [
+        {
+            "url": "https://images.guloggratis.dk/16/183892416_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/11/183892511_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/21/183892421_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/40/183892440_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/37/183892437_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/4/183892604_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/45/183892545_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/90/183892490_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/59/183892459_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/94/183892494_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/42/183892442_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/67/183892467_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/7/183892507_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/58/183892758_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/74/183892774_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/28/183892428_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/44/183892444_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        },
+        {
+            "url": "https://images.guloggratis.dk/49/183892449_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        }
+    ],
+    "user": {
+        "username": "bdc5046",
+        "phone": "+45 28 12 67 64",
+        "has_nemid": false,
+        "avatar": {
+            "url": "https://images.guloggratis.dk/45/161329645_150_150_0_0_0_0_0.jpg",
+            "width": 150,
+            "height": 150
+        }
+    }
+}
